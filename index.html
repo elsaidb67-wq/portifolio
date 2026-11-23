@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090b16">
+<meta name="description" content="Basma Elsaid — WordPress Developer. Selected business websites, e-commerce stores and booking websites.">
+<title>Basma Elsaid | WordPress Developer</title>
+<style>
+:root{--bg:#090b16;--panel:#111528;--panel2:#151b32;--text:#f5f6ff;--muted:#a6aec7;--line:rgba(255,255,255,.1);--purple:#9b7bff;--cyan:#65d7e8;--max:1160px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 80% 0%,rgba(108,76,210,.19),transparent 34%),radial-gradient(ellipse at 0% 38%,rgba(36,166,190,.10),transparent 30%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 44px));margin:auto}.nav{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{font-weight:800;letter-spacing:.3px;font-size:18px}.brand span{color:var(--purple)}.navlinks{display:flex;gap:27px;color:var(--muted);font-size:13px}.navright{display:flex;align-items:center;gap:12px}.lang,.menu{border:1px solid var(--line);background:#ffffff08;color:var(--text);border-radius:99px;padding:9px 14px;cursor:pointer}.hero{padding:92px 0 74px;display:grid;grid-template-columns:1.15fr .85fr;gap:55px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:9px;color:#c7baff;background:#9b7bff18;border:1px solid #9b7bff40;border-radius:99px;padding:7px 13px;font-size:12px;font-weight:700;letter-spacing:.7px;text-transform:uppercase}.dot{width:7px;height:7px;border-radius:50%;background:#78e4b2;box-shadow:0 0 12px #78e4b2}.hero h1{font-size:clamp(42px,6vw,72px);line-height:1.04;letter-spacing:-2.8px;margin:23px 0 18px}.gradient{background:linear-gradient(100deg,#b8a6ff,#67d8e8);-webkit-background-clip:text;background-clip:text;color:transparent}.lead{color:var(--muted);font-size:17px;max-width:610px}.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 19px;border-radius:12px;font-weight:750;font-size:14px;border:1px solid var(--line);transition:.2s}.primary{background:linear-gradient(110deg,#8b6bfa,#5b9fe9);border:0;color:white;box-shadow:0 12px 34px #7759e533}.btn:hover,.project:hover{transform:translateY(-3px)}.secondary{background:#ffffff08}.hero-card{border:1px solid #ffffff18;border-radius:25px;padding:25px;background:linear-gradient(145deg,#1b2140,#101426 65%);box-shadow:0 25px 80px #0006;position:relative;overflow:hidden}.hero-card:before{content:"";position:absolute;width:240px;height:240px;border-radius:50%;background:#8c70ff22;filter:blur(35px);right:-90px;top:-100px}.orbit{height:230px;border-radius:18px;background:linear-gradient(135deg,#29244d,#142e43);display:grid;place-items:center;position:relative;overflow:hidden}.orbit:before,.orbit:after{content:"";position:absolute;border:1px solid #ffffff22;border-radius:50%;width:240px;height:240px}.orbit:after{width:170px;height:170px}.monogram{font-size:68px;font-weight:900;letter-spacing:-5px;background:linear-gradient(130deg,#fff,#b7a5ff 55%,#6cdeea);-webkit-background-clip:text;color:transparent;z-index:1}.mini{display:flex;justify-content:space-between;color:var(--muted);font-size:12px;margin-top:17px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:25px}.stat{padding:16px;border:1px solid var(--line);border-radius:14px;background:#ffffff06}.stat strong{font-size:25px;display:block}.stat span{font-size:11px;color:var(--muted)}section{padding:65px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:28px}.kicker{color:var(--cyan);font-size:11px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase}.section-head h2{font-size:clamp(29px,4vw,43px);letter-spacing:-1.2px;margin:8px 0 0}.section-head p{color:var(--muted);max-width:450px;margin:0}.filters{display:flex;gap:9px;flex-wrap:wrap;margin:0 0 34px}.filter{background:#ffffff08;border:1px solid var(--line);color:var(--muted);padding:9px 15px;border-radius:99px;cursor:pointer;font-size:13px}.filter.active{background:#9b7bff25;border-color:#9b7bff88;color:#e6ddff}
+.category-group{margin-bottom:54px}
+.category-group:last-child{margin-bottom:0}
+.category-header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 22px;margin-bottom:22px;border-radius:18px;border:1px solid rgba(155,123,255,.28);background:linear-gradient(135deg,rgba(155,123,255,.12),rgba(101,215,232,.06))}
+.category-title-wrap{display:flex;align-items:center;gap:14px}
+.category-accent{width:6px;height:36px;border-radius:99px;background:linear-gradient(180deg,var(--purple),var(--cyan))}
+.category-header h3{font-size:clamp(22px,3vw,30px);font-weight:800;letter-spacing:-.6px;margin:0;color:#fff}
+.category-sub{font-size:13px;color:var(--muted);margin:3px 0 0}
+.category-badge{font-size:12px;font-weight:700;color:#e6ddff;background:#9b7bff28;border:1px solid #9b7bff55;padding:7px 14px;border-radius:99px;white-space:nowrap}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.project{background:linear-gradient(150deg,#171d33,#101426);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:.22s;min-width:0}.project-body{padding:17px}.project-top{display:flex;justify-content:space-between;gap:10px;align-items:start}.project h4{font-size:16px;margin:0 0 5px}.domain{font-size:11px;color:var(--muted);overflow-wrap:anywhere}.tag{font-size:10px;color:#cfc4ff;background:#9b7bff20;border:1px solid #9b7bff35;border-radius:99px;padding:5px 8px;white-space:nowrap}.visit{display:flex;justify-content:space-between;align-items:center;margin-top:18px;padding-top:13px;border-top:1px solid var(--line);font-size:12px;color:#c8cfe3}.visit span:last-child{color:var(--cyan);font-weight:800}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.about-box{padding:25px;border:1px solid var(--line);border-radius:18px;background:#ffffff06}.about-box h3{margin:0 0 10px}.about-box p{color:var(--muted);margin:0}.skills{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}.skills span{font-size:12px;color:#d9def0;border:1px solid var(--line);padding:7px 11px;border-radius:9px;background:#ffffff06}.contact{padding:42px;border-radius:24px;border:1px solid #9b7bff50;background:radial-gradient(ellipse at 90% 10%,#8768ed30,transparent 40%),linear-gradient(130deg,#191b36,#11182b);display:flex;justify-content:space-between;align-items:center;gap:25px}.contact h2{font-size:clamp(27px,4vw,40px);margin:0 0 8px}.contact p{color:var(--muted);margin:0}.footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:15px}.hidden{display:none!important}.empty{color:var(--muted);padding:35px;text-align:center;grid-column:1/-1}
+[dir=rtl] body{text-align:right}[dir=rtl] .navlinks{direction:rtl}[dir=rtl] .section-head,[dir=rtl] .contact{flex-direction:row-reverse}[dir=rtl] .project-top{flex-direction:row-reverse}
+@media(max-width:850px){.hero{grid-template-columns:1fr;padding-top:65px}.hero-card{max-width:500px}.grid{grid-template-columns:repeat(2,1fr)}.navlinks{display:none}.about-grid{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:12px}.category-header{flex-direction:column;align-items:flex-start}}
+@media(max-width:560px){.wrap{width:min(100% - 30px,var(--max))}.nav{height:70px}.hero{padding:55px 0 40px;gap:30px}.hero h1{letter-spacing:-1.5px}.stats{gap:7px}.stat{padding:11px}.stat strong{font-size:21px}.stat span{font-size:10px}.grid{grid-template-columns:1fr}section{padding:45px 0}.contact{padding:25px;display:block}.contact .btn{margin-top:18px}.footer{display:block}.footer span{display:block;margin-top:7px}}
+
+.device-previews{display:grid;grid-template-columns:minmax(0,1fr) 86px;gap:12px;align-items:center;padding:14px;background:linear-gradient(145deg,#191f38,#101426)}
+.device-desktop{min-width:0;border:1px solid #ffffff2b;border-radius:9px;padding:6px 6px 8px;background:#080b14;box-shadow:0 8px 24px #0007}
+.device-bar{height:7px;display:flex;gap:4px;align-items:center;padding:0 3px 5px}
+.device-bar i{width:4px;height:4px;border-radius:50%;background:#7c86a5}
+.device-desktop img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;border-radius:3px;background:#252b42}
+.device-phone{width:78px;justify-self:center;border:3px solid #68718b;border-radius:14px;padding:4px 3px 5px;background:#070a12;box-shadow:0 8px 20px #0008;position:relative}
+.device-phone:before{content:"";display:block;width:22px;height:4px;border-radius:9px;background:#68718b;margin:0 auto 4px}
+.device-phone img{display:block;width:100%;height:120px;object-fit:cover;object-position:top;border-radius:7px;background:#252b42}
+@media(max-width:560px){.device-previews{grid-template-columns:minmax(0,1fr) 82px}.device-phone{width:72px}.device-phone img{height:112px}}
+</style>
+</head>
+<body>
+<header class="wrap nav">
+  <a class="brand" href="#">BASMA<span>.</span></a>
+  <nav class="navlinks"><a href="#work" data-en="Portfolio" data-ar="أعمالي">Portfolio</a><a href="#about" data-en="About" data-ar="من أنا">About</a><a href="#contact" data-en="Contact" data-ar="تواصل">Contact</a></nav>
+  <div class="navright"><button class="lang" id="langBtn" aria-label="Switch language">عربي</button></div>
+</header>
+<main>
+<div class="wrap hero">
+  <div>
+    <div class="eyebrow"><i class="dot"></i><span data-en="WORDPRESS DEVELOPER" data-ar="مطورة مواقع ووردبريس">WORDPRESS DEVELOPER</span></div>
+    <h1 data-en="I build digital experiences that <span class='gradient'>move businesses</span> forward." data-ar="أصنع تجارب رقمية تساعد <span class='gradient'>الأعمال على النمو</span>.">I build digital experiences that <span class="gradient">move businesses</span> forward.</h1>
+    <p class="lead" data-en="I'm Basma Elsaid, a WordPress Developer creating modern, responsive websites, online stores and booking experiences that turn ideas into practical digital solutions." data-ar="أنا بسمة السيد، مطورة مواقع ووردبريس. أعمل على تصميم وتطوير مواقع عصرية ومتجاوبة، ومتاجر إلكترونية وأنظمة حجز تحول الأفكار إلى حلول رقمية عملية.">I'm Basma Elsaid, a WordPress Developer creating modern, responsive websites, online stores and booking experiences that turn ideas into practical digital solutions.</p>
+    <div class="actions"><a class="btn primary" href="#work" data-en="Explore my work ↘" data-ar="استعرضي أعمالي ↙">Explore my work ↘</a><a class="btn secondary" href="https://wa.me/201018748314" target="_blank" rel="noopener" data-en="Let's work together" data-ar="تواصلي معي">Let's work together</a></div>
+    <div class="stats"><div class="stat"><strong id="totalCount">36</strong><span data-en="Projects showcased" data-ar="مشروعًا في المعرض">Projects showcased</span></div><div class="stat"><strong>3</strong><span data-en="Project categories" data-ar="تصنيفات للمشاريع">Project categories</span></div><div class="stat"><strong>WP</strong><span data-en="WordPress focus" data-ar="تخصص ووردبريس">WordPress focus</span></div></div>
+  </div>
+  <div class="hero-card"><div class="orbit"><div class="monogram">BE</div></div><div class="mini"><span data-en="DESIGN · BUILD · GROW" data-ar="تصميم · تطوير · نمو">DESIGN · BUILD · GROW</span><span>01 / 03</span></div></div>
+</div>
+<section id="work"><div class="wrap">
+  <div class="section-head"><div><div class="kicker" data-en="SELECTED PROJECTS" data-ar="مشاريع مختارة">SELECTED PROJECTS</div><h2 data-en="A selection of my work" data-ar="مجموعة من أعمالي">A selection of my work</h2></div><p data-en="Explore websites across business, e-commerce and booking experiences. Each project opens in a new tab." data-ar="تصفحي مجموعة من المواقع التعريفية والمتاجر الإلكترونية ومواقع الحجز. كل مشروع يفتح في نافذة جديدة.">Explore websites across business, e-commerce and booking experiences. Each project opens in a new tab.</p></div>
+  <div class="filters" id="filters"><button class="filter active" data-filter="All" data-en="All projects" data-ar="كل المشاريع">All projects</button><button class="filter" data-filter="Business" data-en="Business websites" data-ar="مواقع تعريفية">Business websites</button><button class="filter" data-filter="Booking" data-en="Booking websites" data-ar="مواقع حجوزات">Booking websites</button><button class="filter" data-filter="Ecommerce" data-en="E-commerce" data-ar="متاجر إلكترونية">E-commerce</button></div>
+  <div id="projects"></div>
+</div></section>
+<section id="about"><div class="wrap">
+  <div class="section-head"><div><div class="kicker" data-en="A LITTLE ABOUT ME" data-ar="نبذة عني">A LITTLE ABOUT ME</div><h2 data-en="Turning ideas into websites" data-ar="أحوّل الأفكار إلى مواقع فعّالة">Turning ideas into websites</h2></div></div>
+  <div class="about-grid"><div class="about-box"><h3 data-en="What I do" data-ar="ماذا أقدم؟">What I do</h3><p data-en="I help businesses establish and grow their online presence through thoughtfully structured, responsive WordPress websites. From company profiles to online stores and appointment-based websites, I focus on clarity, usability and a polished experience." data-ar="أساعد الشركات على بناء حضورها الرقمي وتطويره من خلال مواقع ووردبريس منظمة ومتجاوبة. من المواقع التعريفية إلى المتاجر الإلكترونية ومواقع حجز المواعيد، أركز على وضوح المحتوى وسهولة الاستخدام وجودة التجربة.">I help businesses establish and grow their online presence through thoughtfully structured, responsive WordPress websites.</p></div><div class="about-box"><h3 data-en="Tools & capabilities" data-ar="الأدوات والمهارات">Tools & capabilities</h3><p data-en="A practical toolkit for building and managing business websites." data-ar="مجموعة أدوات عملية لتطوير وإدارة مواقع الأعمال.">A practical toolkit for building and managing business websites.</p><div class="skills"><span>WordPress</span><span>Elementor</span><span>WooCommerce</span><span>Responsive Design</span><span>Website Management</span><span>SEO Basics</span></div></div></div>
+</div></section>
+<section id="contact"><div class="wrap"><div class="contact"><div><div class="kicker" data-en="HAVE A PROJECT IN MIND?" data-ar="لديك مشروع؟">HAVE A PROJECT IN MIND?</div><h2 data-en="Let's build something great." data-ar="خلينا نبني حاجة مميزة.">Let's build something great.</h2><p data-en="Tell me what you need, and let's discuss how I can help." data-ar="احكيلي عن مشروعك، وخلينا نتناقش إزاي أقدر أساعدك.">Tell me what you need, and let's discuss how I can help.</p></div><a class="btn primary" href="https://wa.me/201018748314" target="_blank" rel="noopener" data-en="Chat on WhatsApp ↗" data-ar="تواصلي عبر واتساب ↗">Chat on WhatsApp ↗</a></div></div></section>
+</main>
+<footer class="wrap footer"><span>© <span id="year"></span> Basma Elsaid. <span data-en="All rights reserved." data-ar="جميع الحقوق محفوظة.">All rights reserved.</span></span><span data-en="WordPress Developer · Portfolio" data-ar="مطورة ووردبريس · معرض الأعمال">WordPress Developer · Portfolio</span></footer>
+<script>
+const projects = [
+  {
+    "domain": "idea-tm.com",
+    "name": "IDEA TM",
+    "category": "Business",
+    "url": "https://idea-tm.com",
+    "screenshot": "ideatm.png"
+  },
+  {
+    "domain": "oopclinics.com",
+    "name": "OOP Clinics",
+    "category": "Booking",
+    "url": "https://oopclinics.com"
+  },
+  {
+    "domain": "meemlogistic.com",
+    "name": "Meem Logistic",
+    "category": "Business",
+    "url": "https://meemlogistic.com"
+  },
+  {
+    "domain": "velerokw.com",
+    "name": "Velero KW",
+    "category": "Business",
+    "url": "https://velerokw.com"
+  },
+  {
+    "domain": "drhazemhelmy.com",
+    "name": "Dr. Hazem Helmy",
+    "category": "Booking",
+    "url": "https://drhazemhelmy.com",
+    "screenshot": "drhazemhelmy.png"
+  },
+  {
+    "domain": "drsaharosman.com",
+    "name": "Dr. Sahar Osman",
+    "category": "Booking",
+    "url": "https://drsaharosman.com"
+  },
+  {
+    "domain": "ssh-eg.com",
+    "name": "SSH Egypt",
+    "category": "Business",
+    "url": "https://ssh-eg.com"
+  },
+  {
+    "domain": "lamsamassage.com",
+    "name": "Lamsa Massage",
+    "category": "Booking",
+    "url": "https://lamsamassage.com",
+    "screenshot": "lamsa.png"
+  },
+  {
+    "domain": "drnisreenalsiddig.com",
+    "name": "Dr. Nisreen Al Siddig",
+    "category": "Booking",
+    "url": "https://drnisreenalsiddig.com"
+  },
+  {
+    "domain": "drmunaabdelmagid.com",
+    "name": "Dr. Muna Abdelmagid",
+    "category": "Booking",
+    "url": "https://drmunaabdelmagid.com"
+  },
+  {
+    "domain": "sanadalkhalijia.com",
+    "name": "Sanad Al Khalijia",
+    "category": "Business",
+    "url": "https://sanadalkhalijia.com",
+    "screenshot": "sanad.png"
+  },
+  {
+    "domain": "greenconceptplus.com",
+    "name": "Green Concept Plus",
+    "category": "Business",
+    "url": "https://greenconceptplus.com",
+    "screenshot": "greenconcept.png"
+  },
+  {
+    "domain": "powerfitksa.com",
+    "name": "Power Fit KSA",
+    "category": "Booking",
+    "url": "https://powerfitksa.com"
+  },
+  {
+    "domain": "ladies-touch.com",
+    "name": "Ladies Touch",
+    "category": "Booking",
+    "url": "https://ladies-touch.com",
+    "screenshot": "ladiestouch.png"
+  },
+  {
+    "domain": "hadajcom.com",
+    "name": "Hadaj",
+    "category": "Business",
+    "url": "https://hadajcom.com",
+    "screenshot": "hadaj.png"
+  },
+  {
+    "domain": "operfume.co",
+    "name": "O Perfume",
+    "category": "Ecommerce",
+    "url": "https://operfume.co"
+  },
+  {
+    "domain": "kamaleissa.com",
+    "name": "Kamaleissa",
+    "category": "Business",
+    "url": "https://kamaleissa.com"
+  },
+  {
+    "domain": "yazidalyahya.com",
+    "name": "Yazid Al Yahya",
+    "category": "Business",
+    "url": "https://yazidalyahya.com"
+  },
+  {
+    "domain": "imaprealestate.com",
+    "name": "IMAP Real Estate",
+    "category": "Ecommerce",
+    "url": "https://imaprealestate.com"
+  },
+  {
+    "domain": "fitcombo-sa.com",
+    "name": "FitCombo",
+    "category": "Ecommerce",
+    "url": "https://fitcombo-sa.com"
+  },
+  {
+    "domain": "freshdropsystems.ca",
+    "name": "Fresh Drop Systems",
+    "category": "Business",
+    "url": "https://freshdropsystems.ca"
+  },
+  {
+    "domain": "elmasrawy.com",
+    "name": "El Masrawy",
+    "category": "Business",
+    "url": "https://elmasrawy.com",
+    "screenshot": "elmasrawy.png"
+  },
+  {
+    "domain": "futerasa.com",
+    "name": "Futera",
+    "category": "Business",
+    "url": "https://futerasa.com"
+  },
+  {
+    "domain": "iklil.sa",
+    "name": "Iklil",
+    "category": "Ecommerce",
+    "url": "https://iklil.sa"
+  },
+  {
+    "domain": "rashdia.com",
+    "name": "Rashdia",
+    "category": "Business",
+    "url": "https://rashdia.com"
+  },
+  {
+    "domain": "givraai.com",
+    "name": "Givra AI",
+    "category": "Business",
+    "url": "https://givraai.com"
+  },
+  {
+    "domain": "pergolaeg.com",
+    "name": "Pergola Egypt",
+    "category": "Business",
+    "url": "https://pergolaeg.com"
+  },
+  {
+    "domain": "aandemedia-eg.com",
+    "name": "A&E Media",
+    "category": "Business",
+    "url": "https://aandemedia-eg.com",
+    "screenshot": "aandemedia.png"
+  },
+  {
+    "domain": "rmanmaintaince-sa.com",
+    "name": "Rman Maintenance",
+    "category": "Business",
+    "url": "https://rmanmaintaince-sa.com"
+  },
+  {
+    "domain": "safetyshield.com.sa",
+    "name": "Safety Shield",
+    "category": "Business",
+    "url": "https://safetyshield.com.sa"
+  },
+  {
+    "domain": "urg-sa.com",
+    "name": "URG",
+    "category": "Business",
+    "url": "https://urg-sa.com"
+  },
+  {
+    "domain": "aac.com.sa",
+    "name": "AAC",
+    "category": "Business",
+    "url": "https://aac.com.sa"
+  },
+  {
+    "domain": "rawafedmining.com",
+    "name": "Rawafed Mining",
+    "category": "Business",
+    "url": "https://rawafedmining.com",
+    "screenshot": "rawafed.png"
+  },
+  {
+    "domain": "brandy.givraai.com",
+    "name": "Brandy Givra AI",
+    "category": "Ecommerce",
+    "url": "https://brandy.givraai.com/"
+  },
+  {
+    "domain": "barakate.arab-contractors.com",
+    "name": "Barakate Arab Contractors",
+    "category": "Ecommerce",
+    "url": "https://barakate.arab-contractors.com/"
+  },
+  {
+    "domain": "saql.edu.sa",
+    "name": "Saql Edu",
+    "category": "Booking",
+    "url": "https://saql.edu.sa/"
+  }
+];
+const labels = {Business:{en:"Business",ar:"تعريفي"},Ecommerce:{en:"E-commerce",ar:"متجر"},Booking:{en:"Booking",ar:"حجوزات"}};
+const sectionMeta = [
+  {
+    key: "Business",
+    title: {en: "Business Websites", ar: "المواقع التعريفية"},
+    subtitle: {en: "Corporate profiles, service companies, and brand showcases", ar: "مواقع الشركات والمؤسسات والخدمات التعريفية"}
+  },
+  {
+    key: "Booking",
+    title: {en: "Booking & Appointment Websites", ar: "مواقع الحجوزات والمواعيد"},
+    subtitle: {en: "Clinics, wellness centers, academies, and reservation platforms", ar: "العيادات ومراكز الاسترخاء والأكاديميات ومنصات الحجز"}
+  },
+  {
+    key: "Ecommerce",
+    title: {en: "E-Commerce & Online Stores", ar: "المتاجر الإلكترونية"},
+    subtitle: {en: "Online shops, product catalogs, and digital storefronts", ar: "المتاجر الإلكترونية وعرض المنتجات والمنصات التجارية"}
+  }
+];
+let lang="en", active="All";
+const root=document.getElementById("projects");
+
+function renderCard(p){
+  const fallbackDesktop=`https://image.thum.io/get/width/900/crop/650/noanimate/${p.url}`;
+  const fallbackMobile=`https://image.thum.io/get/width/320/crop/900/noanimate/${p.url}`;
+  const baseName = p.screenshot ? p.screenshot.split('/').pop() : '';
+  const altLocal = p.screenshot ? (p.screenshot.startsWith('screenshots/') ? baseName : 'screenshots/' + baseName) : '';
+  const desktopSrc = p.screenshot || fallbackDesktop;
+  const mobileSrc = p.screenshot || fallbackMobile;
+  const onErrDesktop = `if(this.dataset.alt&&this.src.indexOf(this.dataset.alt)===-1){this.src=this.dataset.alt;this.dataset.alt='';}else if(this.dataset.fallback&&this.src!==this.dataset.fallback){this.src=this.dataset.fallback;}`;
+  return `<article class="project"><div class="device-previews"><a class="device-desktop" href="${p.url}" target="_blank" rel="noopener" aria-label="Open ${p.name}"><div class="device-bar"><i></i><i></i><i></i></div><img src="${desktopSrc}" data-alt="${altLocal}" data-fallback="${fallbackDesktop}" onerror="${onErrDesktop}" alt="Desktop screenshot of ${p.name}" loading="lazy"></a><a class="device-phone" href="${p.url}" target="_blank" rel="noopener" aria-label="Open ${p.name} on mobile"><img src="${mobileSrc}" data-alt="${altLocal}" data-fallback="${fallbackMobile}" onerror="${onErrDesktop}" alt="Narrow preview of ${p.name}" loading="lazy"></a></div><div class="project-body"><div class="project-top"><div><h4>${p.name}</h4><div class="domain">${p.domain}</div></div><span class="tag">${labels[p.category][lang]}</span></div><a class="visit" href="${p.url}" target="_blank" rel="noopener"><span>${lang==="en"?"Visit website":"زيارة الموقع"}</span><span>↗</span></a></div></article>`;
+}
+
+function render(){
+  const visibleSections = active === "All"
+    ? sectionMeta
+    : sectionMeta.filter(s => s.key === active);
+
+  root.innerHTML = visibleSections.map(sec => {
+    const items = projects.filter(p => p.category === sec.key);
+    if (!items.length) return "";
+    const countLabel = lang === "en" ? `${items.length} projects` : `${items.length} مشاريع`;
+    return `
+      <div class="category-group" id="cat-${sec.key.toLowerCase()}">
+        <div class="category-header">
+          <div class="category-title-wrap">
+            <span class="category-accent"></span>
+            <div>
+              <h3>${sec.title[lang]}</h3>
+              <p class="category-sub">${sec.subtitle[lang]}</p>
+            </div>
+          </div>
+          <span class="category-badge">${countLabel}</span>
+        </div>
+        <div class="grid">
+          ${items.map(renderCard).join("")}
+        </div>
+      </div>
+    `;
+  }).join("");
+}
+
+function setLang(next){
+ lang=next;document.documentElement.lang=lang;document.documentElement.dir=lang==="ar"?"rtl":"ltr";
+ document.querySelectorAll("[data-en]").forEach(el=>{el.innerHTML=el.dataset[lang]});
+ document.getElementById("langBtn").textContent=lang==="en"?"عربي":"English";
+ render();
+}
+document.getElementById("langBtn").addEventListener("click",()=>setLang(lang==="en"?"ar":"en"));
+document.querySelectorAll(".filter").forEach(btn=>btn.addEventListener("click",()=>{active=btn.dataset.filter;document.querySelectorAll(".filter").forEach(b=>b.classList.toggle("active",b===btn));render()}));
+document.getElementById("year").textContent=new Date().getFullYear();
+document.getElementById("totalCount").textContent=projects.length;
+render();
+</script>
+</body></html>
